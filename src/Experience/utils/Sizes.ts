@@ -15,6 +15,7 @@ export default class Sizes {
       this.height = window.innerHeight;
       this.aspect = this.width / this.height;
       this.pixelRatio = Math.min(window.devicePixelRatio, 2);
+      dispatchEvent(new CustomEvent("resize"));
     });
   }
 }
